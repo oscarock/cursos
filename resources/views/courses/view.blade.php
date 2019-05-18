@@ -37,7 +37,7 @@
             
             <!-- Modal footer -->
             <div class="modal-footer">
-                <input type="submit" class="btn btn-primary" value="Actualizar" v-on:click.prevent="updateUser(fillCourse)">
+                <input type="submit" class="btn btn-primary" value="Actualizar" v-on:click.prevent="updateCourse(fillCourse)">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
             </div>
