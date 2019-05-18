@@ -26,12 +26,13 @@
                     <td>@{{ courses.capacity }}</td>
                     <td>@{{ courses.observations }}</td>
                     <td>
-                        <a href="#" v-on:click.prevent="viewCourses(courses)"><i class="far fa-eye"></i></a>
+                        <a href="#" v-on:click.prevent="viewCourse(courses)"><i class="far fa-eye"></i></a>
                     </td>
                 </tr>
             </table>
         </div>    
     </div>
     @include('courses.create')
+    @include('courses.view')
 </div>
 @endsection

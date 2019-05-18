@@ -9,7 +9,8 @@ new Vue({
         name_course: "",
         name_teacher: "",
         capacity: "",
-        observations: ""
+        observations: "",
+        fillCourse: {'id': '', 'name_course': '', 'name_teacher': '', 'capacity': '', 'observations': ''}
     },
 
     methods: {
@@ -38,6 +39,14 @@ new Vue({
             }).catch(error => {
                 this.errors = error.response.data.errors
             })
+        },
+        viewCourse: function(course){
+            this.fillCourse.id = course.id
+            this.fillCourse.name_course = course.name_course
+            this.fillCourse.name_teacher = course.name_teacher
+            this.fillCourse.capacity = course.capacity
+            this.fillCourse.observations = course.observations
+            $("#view").modal("show")
         }
     }
 })
