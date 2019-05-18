@@ -32,5 +32,6 @@
             </table>
         </div>    
     </div>
+    @include('courses.create')
 </div>
 @endsection

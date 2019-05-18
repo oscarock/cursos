@@ -26,7 +26,21 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name_course' => 'required',
+            'name_teacher' => 'required',
+            'capacity' => 'required|numeric',
+            'observations' => 'required'
+        ]);
+
+        $courses = new Course;
+        $courses->name_course = $request->input('name_course');
+        $courses->name_teacher = $request->input('name_teacher');
+        $courses->capacity = $request->input('capacity');
+        $courses->observations = $request->input('observations');
+        $courses->save();
+
+        return;
     }
 
     /**
