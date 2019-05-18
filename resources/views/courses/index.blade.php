@@ -27,6 +27,7 @@
                     <td>@{{ courses.observations }}</td>
                     <td>
                         <a href="#" v-on:click.prevent="viewCourse(courses)"><i class="far fa-eye"></i></a>
+                        <a href="#" v-on:click.prevent="deleteCourse(courses)"><i class="far fa-trash-alt"></i></a>
                     </td>
                 </tr>
             </table>

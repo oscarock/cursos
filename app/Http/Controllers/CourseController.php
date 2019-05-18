@@ -65,7 +65,7 @@ class CourseController extends Controller
         $courses->capacity = $request->input('capacity');
         $courses->observations = $request->input('observations');
         $courses->save();
-        
+
         return;
     }
 
@@ -77,6 +77,7 @@ class CourseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $courses = Course::findOrFail($id);
+        $courses->delete();
     }
 }

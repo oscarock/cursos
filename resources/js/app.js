@@ -67,6 +67,13 @@ new Vue({
             }).catch(error => {
                 this.errors = error.response.data.errors
             })
+        },
+        deleteCourse: function(course){
+            var urlDelete = "courses/" + course.id
+            axios.delete(urlDelete).then(response => {
+                this.getAllCourses()
+                toastr.success("Eliminado Correctamente")
+            })
         }
     }
 })
