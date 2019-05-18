@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('courses.index');
 });
+
+Route::resource('courses','CourseController')->except('create','edit','show');
